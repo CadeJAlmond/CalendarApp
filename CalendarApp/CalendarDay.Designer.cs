@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.DayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // DayLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.DayLabel.AutoSize = true;
+            this.DayLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(146)))), ((int)(((byte)(60)))));
+            this.DayLabel.Location = new System.Drawing.Point(31, 29);
+            this.DayLabel.Name = "DayLabel";
+            this.DayLabel.Size = new System.Drawing.Size(0, 54);
+            this.DayLabel.TabIndex = 1;
             // 
-            // CalenderDay
+            // CalendarDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Name = "CalenderDay";
+            this.Controls.Add(this.DayLabel);
+            this.Name = "CalendarDay";
             this.Size = new System.Drawing.Size(349, 211);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -54,6 +55,6 @@
 
         #endregion
 
-        private Label label1;
+        private Label DayLabel;
     }
 }

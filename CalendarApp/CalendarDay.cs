@@ -19,7 +19,7 @@ namespace CalendarApp
 
         public void AddDayLabel(string CurrentDay) 
         { 
-            label1.Text = CurrentDay;
+            DayLabel.Text = CurrentDay;
         }
     }
 }
