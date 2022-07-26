@@ -45,9 +45,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.Controls.Add(this.DayLabel);
             this.Name = "CalendarDay";
-            this.Size = new System.Drawing.Size(349, 211);
+            this.Size = new System.Drawing.Size(349, 220);
             this.ResumeLayout(false);
             this.PerformLayout();
 

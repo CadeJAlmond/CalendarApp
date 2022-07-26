@@ -42,12 +42,12 @@
             // EmptyDay
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 30, 3, 30);
             this.Name = "EmptyDay";
             this.Padding = new System.Windows.Forms.Padding(50, 100, 50, 100);
-            this.Size = new System.Drawing.Size(349, 211);
+            this.Size = new System.Drawing.Size(349, 220);
             this.ResumeLayout(false);
             this.PerformLayout();
 
