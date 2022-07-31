@@ -43,21 +43,21 @@
             // 
             // NextBtn
             // 
-            this.NextBtn.Location = new System.Drawing.Point(2467, 1687);
+            this.NextBtn.Location = new System.Drawing.Point(2431, 1687);
             this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(161, 58);
+            this.NextBtn.Size = new System.Drawing.Size(197, 58);
             this.NextBtn.TabIndex = 1;
-            this.NextBtn.Text = "Next";
+            this.NextBtn.Text = "Next >>";
             this.NextBtn.UseVisualStyleBackColor = true;
             this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
             // PrevBtn
             // 
-            this.PrevBtn.Location = new System.Drawing.Point(2279, 1687);
+            this.PrevBtn.Location = new System.Drawing.Point(2197, 1687);
             this.PrevBtn.Name = "PrevBtn";
-            this.PrevBtn.Size = new System.Drawing.Size(161, 58);
+            this.PrevBtn.Size = new System.Drawing.Size(198, 58);
             this.PrevBtn.TabIndex = 2;
-            this.PrevBtn.Text = "Previous";
+            this.PrevBtn.Text = "<< Previous";
             this.PrevBtn.UseVisualStyleBackColor = true;
             this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
             // 

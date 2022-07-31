@@ -4,10 +4,12 @@ namespace CalendarApp
 {
     // Author : Cade Almond
     // Date   : 7/25/2022
-    // Description: 
-    // This class is responsible for creating a Calendar, which will traverse
-    // Through the different months, and different years.
-    
+    //
+    // Class Contents 
+    // This class is responsible for creating a GUI Calendar, which will
+    // traverse Through, and display the days of the month in the
+    // applicable years.
+    //
     public partial class Form1 : Form
     {
         // Values for Calendar navigation
@@ -41,7 +43,7 @@ namespace CalendarApp
 
         /// <summary>
         ///  This method is responsible for placing the UI elements, and 
-        ///  calculating month information, and placing information into 
+        ///  calculating month information, and placing information into
         ///  the application
         /// </summary>
         private void CalendarThread_DoWork(object? sender, DoWorkEventArgs e)
@@ -73,11 +75,11 @@ namespace CalendarApp
         }
 
         /// <summary>
-        /// This method is responsible for using the correct API to find
-        /// the applicable information regarding the amount of days in a
-        /// given month, and the amount of padding days to format the
-        /// Calendar. Then communicating the which object needs to be added
-        /// to the GUI
+        /// This method is responsible for using the correct API to find 
+        /// the applicable information regarding the amount of days in 
+        /// a given month, and the amount of padding days to format the 
+        /// Calendar. Then  communicating the which object needs to be 
+        /// added to the GUI
         /// </summary>
         private void DisplayMonth(int _Month, int _Year)
         {
@@ -109,15 +111,49 @@ namespace CalendarApp
         }
 
         /// <summary>
+        /// This method is responsible for incrementing or decrementing
+        /// the appropriate values to display into the Calender.
+        /// </summary>
+        private void UpdateMonth(bool GoNextMonth, int ResetDay) 
+        {
+            CalendarGrid.Controls.Clear();
+
+            if (GoNextMonth)
+                Month++;
+            else
+                Month--;
+
+            CheckYear(GoNextMonth);
+            CalendarThread.RunWorkerAsync();
+        }
+
+
+        /// <summary>
+        /// This method ensures that the Calender will make ensure
+        /// that the displayed Year, and Months are set appropriately
+        /// </summary>
+        private void CheckYear(bool GoNextMonth) 
+        {
+            if (GoNextMonth && Month > 12)
+            {
+                Year++;
+                Month = 1;
+            }
+            else if (Month == 0)
+            {
+                Year--;
+                Month = 12;
+            }
+        }
+
+        /// <summary>
         /// This method will display the previous month's information
         /// onto the Calendar
         /// </summary>
         private void PrevBtn_Click(object sender, EventArgs e)
         {
-            CalendarGrid.Controls.Clear();
-            Month--;
-            Day = 1;
-            CalendarThread.RunWorkerAsync();
+            if (!CalendarThread.IsBusy)
+                UpdateMonth(false, Day = 1);
         }
 
         /// <summary>
@@ -126,10 +162,8 @@ namespace CalendarApp
         /// </summary>
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            CalendarGrid.Controls.Clear();
-            Month++;
-            Day = 1;
-            CalendarThread.RunWorkerAsync();
+            if (!CalendarThread.IsBusy)
+                UpdateMonth(true, Day = 1);
         }
     }
 }
